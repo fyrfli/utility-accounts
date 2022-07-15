@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  color: maroon;
+  background-color: whitesmoke;
+  width: 90%;
+  margin: auto;
+  font-size: 20px;
+}
+
+a:-webkit-any-link {
+  color: darkgreen;
+}
+
+a:-moz-any-link {
+  color: darkgreen;
+}
+
+a:any-link {
+  color: darkgreen;
+}
+header {
+  width: 90%;
+  margin: auto;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  text-underline-offset: 8px;
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-size: 2em;
+}
+header h2 {
+  font-size: 1.6em;
+}
+
+main {
+  box-shadow: 2px 2px 8px lightgrey;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 360px;
+  gap: 30px;
+  justify-content: center;
+  padding: 10px;
+}
+.bill {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 8px lightgrey;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.hours {
+  padding: 10px;
+}
+
+.acct {
+  padding: 10px;
+}
+
+.amt {
+  padding: 10px;
+}
+
+.dates {
+  padding: 10px;
+}
+
+footer {
+  width: 65%;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto;
+  border-top: 1px solid darkgreen;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  main {
+    grid-template-columns: 340px 340px;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}

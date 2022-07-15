@@ -1,0 +1,57 @@
+[
+  {
+    "name": "electricity",
+    "site": "https://lacledeelectric.smarthub.coop/Login.html",
+    "hours": "-",
+    "phone": "5737742281",
+    "acct": "7931902",
+    "amt": "115.21",
+    "autopay": "them",
+    "billdate": "23rd",
+    "duedate": "13th"
+  },
+  {
+    "name": "water",
+    "site": "https://pwsd2.net/",
+    "hours": "M - F | 08:00 - 16:30",
+    "phone": "5733365833",
+    "acct": "16685",
+    "amt": "23.99",
+    "autopay":"no",
+    "billdate": "23rd",
+    "duedate": "15th"
+  },
+  {
+    "name": "sewer",
+    "site": "https://pcsd1.frontdeskgworks.com/login.html",
+    "hours": "M - F | 09:00 - 15:30",
+    "phone": "5733365880",
+    "acct": "18510002",
+    "amt": "62.76",
+    "autopay":"them",
+    "billdate": "1st",
+    "duedate": "20th"
+  },
+  {
+    "name": "cable",
+    "site": "https://mybroadbandaccount.com/CableMO/",
+    "hours": "-",
+    "phone": "5733365284",
+    "acct": "031-156394",
+    "amt": "127.00",
+    "autopay":"them",
+    "billdate": "23rd",
+    "duedate": "15th"
+  },
+  {
+    "name": "trash",
+    "site": "-",
+    "hours": "M - F | 09:00 - 15:30",
+    "phone": "5733364848",
+    "acct": "460061",
+    "amt": "19.75",
+    "autopay":"usaa",
+    "billdate": "-",
+    "duedate": "15th"
+  }
+]
