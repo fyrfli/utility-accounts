@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+@black: black;
+@maroon: maroon;
+@darkgrey: #03081b;
+@orange: #eac56b;
+
+a {
+  color: black;
+
+  &:hover {
+    color: maroon;
+  }
+
+  &:link {
+    text-decoration: dotted underline;
+  }
+
+  &:visited {
+    text-decoration: line-through;
+  }
+}
+
+body {
+  background: linear-gradient(to top left, @darkgrey, @orange);
+  background-attachment: fixed;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  width: 90vw;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hdr-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.items {
+  margin: auto;
+  padding: 2rem;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.lnk {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: @darkgrey;
+  color: @orange;
+  border-radius: 24px;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.results {
+  border: 1px solid @black;
+  border-radius: 12px;
+  height: 25vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 2rem;
+  margin: auto;
+}
+
+
+.footer {
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
+  border-top: 1px dotted @darkgrey;
+  text-align: center;
+  font-size: 0.8rem;
+}
