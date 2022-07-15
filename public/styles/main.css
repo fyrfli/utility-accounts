@@ -222,6 +222,9 @@ body {
   margin: 2rem auto;
   padding: 1rem;
 }
+.main-para {
+  text-align: center;
+}
 .footer {
   font-size: 0.75rem;
   text-align: center;
