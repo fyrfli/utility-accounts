@@ -1,0 +1,6 @@
+services:
+  image: nginx:alpine
+  ports:
+    - 80:80
+  volumes:
+    - $PWD/public:/usr/share/nginx/html/
