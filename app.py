@@ -11,12 +11,13 @@ configs = dotenv_values()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = configs['SECRET_KEY']
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assets/' + configs['DB_NAME']
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 db = SQLAlchemy(app)
 
 the_year = date.today().year
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/')
 def index():
     return render_template('index.html', the_year=the_year)
 
