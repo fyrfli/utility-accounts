@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a self-coded crud app to store information about utilities for our household">
+    <meta name="author" content="camille frantz">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet/less" type="text/css" href={{ url_for('static'), filename="styles.less" }} />
+    <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+</head>
+<body>
+    <header class="header"></header>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="footer">
+        &copy;{{ the_year }} Camille (<a href="https://fyrfli.dev/fyrfli">@fyrfli</a>) Frantz <br>
+        proudly powered by <img src="https://cdn.fyrfli.link/fork-awesome/flask.svg" alt="" class="icon"> <a href="https://flask.palletsprojects.com">Flask</a>
+    </footer>
+</body>
+</html>

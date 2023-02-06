@@ -4,8 +4,7 @@ from wtforms import DateTimeField, StringField, TextAreaField, RadioField, Email
 from wtforms.validators import InputRequired, Length, Email, EqualTo
 from dotenv import load_dotenv, dotenv_values
 from flask_login import LoginManager
-
-from app import models
+from datetime import date, datetime
 
 load_dotenv()
 configs = dotenv_values()
@@ -15,7 +14,9 @@ app.config['SECRET_KEY'] = configs['SECRET_KEY']
 
 db = SQLAlchemy(app)
 
+the_year = date.today().year
+
 @app.route('/', methods = ['GET', 'POST'])
 def index():
-    if request.method == 'GET':
+    return render_template('index.html', the_year=the_year)
 
