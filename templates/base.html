@@ -8,6 +8,7 @@
     <title>utility accounts app</title>
     <link rel="stylesheet/less" type="text/css" href={{ url_for("static", filename="styles.less") }} />
     <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+    <link rel="shortcut icon" href={{ url_for('static', filename="favicon.png") }} type="image/x-icon">
 </head>
 <body>
     <header class="header"></header>
@@ -16,7 +17,7 @@
     </main>
     <footer class="footer">
         &copy;{{ the_year }} Camille (<a href="https://fyrfli.dev/fyrfli">@fyrfli</a>) Frantz <br>
-        proudly powered by <img src="https://cdn.fyrfli.link/fork-awesome/flask.svg" alt="" class="icon"> <a href="https://flask.palletsprojects.com">Flask</a>
+        proudly powered by <img src={{ url_for('static', filename="flask-icon.png") }} alt="" class="icon"> <a href="https://flask.palletsprojects.com">Flask</a>
     </footer>
 </body>
 </html>
