@@ -6,7 +6,7 @@ twofold:
 - learn flask
 - keep track of our utilities in one shared space
 
-### requirements  
+## requirements  
 an .env file with the following variables set:
 - DB_NAME=dbname.sqlite (right now only sqlite databases are supported)
 - SECRET_KEY=random-string-of-characters (can generate with `openssl rand -base64 32`)
