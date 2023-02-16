@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="util-detail">
+        <tbody class="util-lines">
+            <tr class="util-line">
+                <th>Name: </th>
+                <td><a href={{ form_data.util_site }}>{{ form_data.util_name }} ⤴︎</a></td>
+            </tr>
+            <tr class="util-line">
+                <th>Account#: </th>
+                <td>{{ form_data.util_acct }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Main tele: </th>
+                <td>{{ form_data.util_main }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Alt tele: </th>
+                <td>{{ form_data.util_alt }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Hours: </th>
+                <td>{{ form_data.util_hours }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Amount: </th>
+                <td>{{ form_data.util_amt }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Bill date: </th>
+                <td>{{ form_data.util_bdate }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Due date: </th>
+                <td>{{ form_data.util_ddate }}</td>
+            </tr>
+            <tr class="util-line">
+                <th>Autopay?: </th>
+                <td>{{ form_data.util_autopay }}</td>
+            </tr>
+        </tbody>
+        <!--
+        <tfoot>
+            <tr>
+                <td colspan="2"> <form><input type="submit" action="edit" name="edit" value="edit"/></form></td>
+            </tr>
+        </tfoot>
+        -->
+    </table>
+{% endblock %}

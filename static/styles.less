@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Blex';
+    src: url('fonts/Blex Mono Nerd Font Complete Mono.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Blex';
+    src: url('fonts/Blex Mono Bold Nerd Font Complete Mono.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Blex';
+    src: url('fonts/Blex Mono Italic Nerd Font Complete Mono.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Blex';
+    src: url('fonts/Blex Mono Bold Italic Nerd Font Complete Mono.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -7,23 +32,127 @@
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
-
 body {
-    font-family: Paprika;
-    font-size: 12px;
+    font-family: Blex;
+    font-size: 15px;
+    background-color: #0a0a0a;
+    color: goldenrod;
+    margin: 2rem;
+}
+
+a {
+    &:link {
+        color: #fffdd0;
+    }
+    &:visited {
+        color: #ffffee;
+    }
+    &:hover {
+        color: palevioletred;
+    }
+}
+
+.nav-items {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.nav-item {
+    padding: 0.2rem 0.5rem;
+    border-radius: 16px;
+    background-color: darken(goldenrod, 10%);
+    color: #0a0a0a;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-flow: row nowrap;
+}
+
+.hdrimg {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px ridge lighten(goldenrod, 10%);
+}
+
+.hdrhdg {
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.container {
+    margin-top: 4rem;
+}
+
+.login-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+    margin: auto;
+}
+
+input {
+    margin-top: 0.4rem;
+    padding: 0.25rem;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.utils-list {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.util-detail {
+    margin: auto;
+    border-spacing: 18px 6px;
+}
+
+.util-line > th {
+    text-align: right;
+}
+
+.util-line > td {
+    text-align: left;
+}
+
+tfoot {
+    font-style: italic;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.edit-form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
 }
 
 .debug-para {
     text-align: center;
     margin: 2rem;
     padding: 2rem;
+    font-size: 20px;
 }
 
 .footer {
     text-align: center;
     margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
 }
 
 .icon {
@@ -31,7 +160,15 @@ body {
     vertical-align: middle;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+    object-fit: contain;
     object-position: center;
+    border-radius: 50%;
     line-height: 1.8rem;
+    filter: invert(80%);
+}
+
+@media only screen and (min-width: 980px) {
+    .edit-form {
+        width: 420px;
+    }  
 }

@@ -1,28 +1,29 @@
 #!/usr/bin/env python
 from getpass import getpass
 import sys
+from hashlib import sha256
+from werkzeug.security import generate_password_hash
 
-from flask import current_app
-from bull import app, bcrypt
-from bull.models import User, db
+from models import User, db
+from app import app
+
+from dotenv import load_dotenv, dotenv_values
+
+load_dotenv()
+env = dotenv_values()
 
 def main():
     with app.app_context():
         db.metadata.create_all(db.engine)
         if User.query.all():
-            print ('A user already exists! Create another? (y/n):')
-            create = raw_input()
-            if create == 'n':
-                return
-
-        print ('Enter email address: ')
-        email = raw_input()
-        password = getpass()
-        assert password == getpass('Password (again):')
+            print ('Admin user already exists!')
+            return
 
         user = User(
-            email=email, 
-            password=bcrypt.generate_password_hash(password))
+            user_name = env['ADMIN_USERNAME'],
+            user_email = env['ADMIN_EMAIL'], 
+            user_pass = generate_password_hash(env['ADMIN_PASSWORD'])
+            )
         db.session.add(user)
         db.session.commit()
         print ('User added.')

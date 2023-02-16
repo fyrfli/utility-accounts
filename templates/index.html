@@ -1,4 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p class="debug-para">Index page with main utility information</p>
+    <table class="utils-list">
+        <thead>
+            <tr>
+                <th>List of utilties on file</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td> </td></tr>
+            {% for rows in utils %}
+                <tr>
+                    <td class="util-name"><a href="/view/{{ rows.util_id }}">{{ rows.util_name }}</a></td>
+                </tr>
+            {% endfor %}
+            <tr><td> </td></tr>
+        </tbody>
+        <tfoot>
+            <tr><td></td></tr>
+            <tr><td colspan="3"><a href="/add">» new «</a></td></tr>
+        </tfoot>
+    </table>
 {% endblock %}

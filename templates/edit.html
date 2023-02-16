@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="POST" action="" class="edit-form">
+        {{ form_data.hidden_tag() }}
+            Utility name: {{ form_data.util_name(placeholder = 'utility name') }}
+            Website: {{ form_data.util_site(placeholder = 'website') }}
+            Account#: {{ form_data.util_acct(placeholder = 'account number') }}
+            Main tele: {{ form_data.util_main(placeholder = 'main telephone') }}
+            Alt. tele: {{ form_data.util_alt(placeholder = 'alternate telephone') }}
+            Hours: {{ form_data.util_hours(placeholder = 'M - F 08:00 - 16:00') }}
+            Amount: {{ form_data.util_amt(placeholder = 'average amount') }}
+            Bill date: {{ form_data.util_bdate(placeholder = 'billing date') }}
+            Due date: {{ form_data.util_ddate(placeholder = 'due date') }}
+            Autopay? {{ form_data.util_autopay(placeholder = 'N') }}
+            <fieldset>
+                <legend>Actions</legend>
+                <input type="submit" name="action" value="update">
+                <input type="submit" name="action" value="delete">
+            </fieldset>
+    </form>
+{% endblock %}

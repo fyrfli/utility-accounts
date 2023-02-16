@@ -10,6 +10,8 @@ flask-sqlalchemy = "*"
 flask-wtf = "*"
 wtforms = "*"
 flask-login = "*"
+flask-migrate = "*"
+hypercorn = "*"
 
 [dev-packages]
 
