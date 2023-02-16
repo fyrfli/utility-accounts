@@ -13,4 +13,7 @@ an .env file with the following variables set:
 - ADMIN_USERNAME=yourname
 - ADMIN_EMAIL=youremail
 - ADMIN_PASSWORD=yourpassword
-- on first installation, run `python create_user.py` to create the database and insert the admin user (a registration module *may* follow later but for now, only one account is needed)
+
+---
+
+before you start using the app, run `python create_user.py` to create the database and insert the admin user (a registration module *may* follow later but for now, only one account is needed)
