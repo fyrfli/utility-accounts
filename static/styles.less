@@ -34,7 +34,7 @@
 
 body {
     font-family: Blex;
-    font-size: 15px;
+    font-size: 14px;
     background-color: #0a0a0a;
     color: goldenrod;
     margin: 2rem;
@@ -84,7 +84,7 @@ a {
 
 .hdrhdg {
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .container {
@@ -141,6 +141,13 @@ tfoot {
     gap: 10px;
 }
 
+fieldset {
+    margin: auto;
+    padding: 1rem 1.2rem;
+    width: fit-content;
+    border-radius: 12px;
+}
+
 .debug-para {
     text-align: center;
     margin: 2rem;
@@ -168,6 +175,14 @@ tfoot {
 }
 
 @media only screen and (min-width: 980px) {
+    body {
+        width: 70vw;
+        margin: 2rem auto;
+        font-size: 18px;
+    }
+    .hdrhdg {
+        font-size: 2rem;
+    }
     .edit-form {
         width: 420px;
     }  

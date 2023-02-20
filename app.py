@@ -46,10 +46,10 @@ def view(id):
             util = models.db.get_or_404(models.Utility, id)
             return render_template('view.html', the_year=the_year, form_data=util)
 
-@app.route('/edit', methods = ['POST', 'GET'])
+@app.route('/edit/<int:id>', methods = ['POST', 'GET'])
 def edit(id):
     form = forms.Utils()
-    utils = models.Utility()
+    utils = models.db.get_or_404(models.Utility, id)
     with app.app_context():
         if request.method == 'POST':
             if request.form['action'] == 'delete':
@@ -72,7 +72,20 @@ def edit(id):
                 models.db.session.commit()
                 return redirect(url_for('index'))
         else:
-            return render_template('edit.html', edit_flag=False, the_year=the_year, form_data=form)
+            form.util_name = utils.util_name
+            form.util_site = utils.util_site
+            form.util_acct = utils.util_acct
+            form.util_main = utils.util_main
+            form.util_alt = utils.util_alt
+            form.util_hours = utils.util_hours
+            form.util_amt = utils.util_amt
+            form.util_bdate = utils.util_bdate
+            form.util_ddate = utils.util_ddate
+            if utils.util_autopay == True:
+                form.util_autopay = 'y'
+            else:
+                form.util_autopay = 'n'
+            return render_template('edit.html', edit_flag=True, the_year=the_year, form_data=form)
 
 @app.route('/add', methods = ['POST', 'GET'])
 def add():
