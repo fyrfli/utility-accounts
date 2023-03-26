@@ -41,7 +41,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="2"> <a href="{{ url_for('edit', id=form_data.util_id) }}">Edit</a></td>
+                <td colspan="2"> <a href="{{ url_for('edit', _method='POST', _external=False, id=form_data.util_id) }}">Edit</a></td>
             </tr>
         </tfoot>
     </table>

@@ -32,12 +32,18 @@
     padding: 0;
 }
 
+@olivegreen: #A9A248;
+@bronze: #401E08;
+@tumeric: #BCB64B;
+@wineberry: #431C31;
+
 body {
     font-family: Blex;
     font-size: 14px;
-    background-color: #0a0a0a;
-    color: goldenrod;
-    margin: 2rem;
+    background-color: @wineberry;
+    color: @tumeric;
+    margin: 4rem auto;
+    width: 95vw;
 }
 
 a {
@@ -133,7 +139,8 @@ tfoot {
     text-align: center;
 }
 
-.edit-form {
+.edit-form,
+.add-form {
     width: 90%;
     margin: auto;
     display: flex;
@@ -176,13 +183,14 @@ fieldset {
 
 @media only screen and (min-width: 980px) {
     body {
-        width: 70vw;
-        margin: 2rem auto;
+        width: 60vw;
+        margin: 4rem auto;
         font-size: 18px;
     }
     .hdrhdg {
         font-size: 2rem;
     }
+    .add-form,
     .edit-form {
         width: 420px;
     }  

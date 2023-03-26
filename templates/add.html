@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="POST" action="" class="add-form">
+        {{ form_data.hidden_tag() }}
+            Utility name: {{ form_data.util_name }}
+            Website: {{ form_data.util_site }}
+            Account#: {{ form_data.util_acct }}
+            Main tele: {{ form_data.util_main }}
+            Alt. tele: {{ form_data.util_alt }}
+            Hours: {{ form_data.util_hours }}
+            Amount: {{ form_data.util_amt }}
+            Bill date: {{ form_data.util_bdate }}
+            Due date: {{ form_data.util_ddate }}
+            Autopay? {{ form_data.util_autopay }}
+            <input type="submit" name="action" value="add">
+    </form>
+{% endblock %}
