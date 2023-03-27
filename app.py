@@ -1,4 +1,5 @@
 from flask import Flask, redirect, render_template, request, url_for, session
+from flask_login import login_required, current_user, login_user, logout_user
 from dotenv import load_dotenv, dotenv_values
 from datetime import date, datetime
 import hashlib
@@ -102,7 +103,7 @@ def login():
 
     if request.method == 'POST':
         email = request.form['email']
-        user = User.query.filter_by(user_email=email).first()
+        user = models.User.query.filter_by(user_email=email).first()
         print(user.user_name, user.user_pass, request.form['password'])
         if user is not None and user.check_password(request.form['password']):
             login_user(user)
