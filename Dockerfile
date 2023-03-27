@@ -19,4 +19,4 @@ run chown -R app:app $APP_HOME
 
 user app:app
 
-entrypoint ["hypercorn", "-w", "2", "--bind", "127.0.0.1:8000", "--server-name","accounts.fyrf.li","app.py", "&"]
+entrypoint ["hypercorn", "-w", "2", "--bind", "127.0.0.1:8000", "--server-name","accounts.fyrf.li","app.py"]
